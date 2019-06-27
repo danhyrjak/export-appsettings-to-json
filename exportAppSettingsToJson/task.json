@@ -1,0 +1,30 @@
+{
+    "id": "27cd4bf4-114c-44da-bf5d-ff561e182592",
+    "name": "ExportAppSettingsToJson",
+    "friendlyName": "Export App Settings to JSON",
+    "description": "Exports all app settings prefixed with appsetting. to a JSON file",
+    "helpMarkDown": "",
+    "category": "Utility",
+    "author": "Dan Hyrjak",
+    "version": {
+        "Major": 1,
+        "Minor": 0,
+        "Patch": 0
+    },
+    "instanceNameFormat": "Echo $(samplestring)",
+    "inputs": [
+        {
+            "name": "jsonfilepath",
+            "type": "string",
+            "label": "JSON Filepath",
+            "defaultValue": "settings.json",
+            "required": true,
+            "helpMarkDown": "The full file path to the json file you want to write the settings to"
+        }
+    ],
+    "execution": {
+        "Node": {
+            "target": "index.js"
+        }
+    }
+}
