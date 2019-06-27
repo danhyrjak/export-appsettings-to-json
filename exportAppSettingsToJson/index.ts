@@ -35,6 +35,10 @@ async function run() {
                     propName = name.substring(appSettingOffset + 7);
                     propVal = v.value;
                 }
+                else if (name.startsWith(appSettingPrefix + "bool.")) {
+                    propName = name.substring(appSettingOffset + 5);
+                    propVal = (v.value || '').trim().toLowerCase() === "true";
+                }
                 else {
                     //treat as string (untyped)
                     propName = name.substring(appSettingOffset);

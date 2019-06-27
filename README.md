@@ -16,6 +16,7 @@ The task also supports the following optional types:
 
 * string (default)
 * number
+* bool (enter '**true**' for true, any other value will be considered false)
 
 type is specifed at the second postion of the name prefix. For example to specify the property named *thisIsANum* is a number you would give it the variable name of:
 **appsetting.number.thisIsANum**.

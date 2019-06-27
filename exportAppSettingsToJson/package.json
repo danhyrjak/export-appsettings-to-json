@@ -1,6 +1,6 @@
 {
   "name": "exportappsettingstojson",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "custom Azure DevOps task to export settings to json file",
   "main": "index.js",
   "scripts": {
