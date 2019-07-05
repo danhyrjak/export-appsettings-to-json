@@ -16,7 +16,7 @@ The task also supports the following optional types:
 
 * string (default)
 * number
-* bool (enter '**true**' for true, any other value will be considered false)
+* bool (enter **true** for true, any other value will be considered false)
 
 type is specifed at the second postion of the name prefix. For example to specify the property named *thisIsANum* is a number you would give it the variable name of:
 **appsetting.number.thisIsANum**.
@@ -25,10 +25,16 @@ Note: If no known type is specifed then a string type is presumed. For example t
 
 ## Build
 
- To build this solution you must have node.js globally installed along with the **tfx-cli** npm package.
+### Prerequisites
 
- Run npm i to install the project dependancies.
+ To build this solution you must have node.js globally installed along with the **tfx-cli** npm package and TypeScript.
 
- Update the publisher field in vss-extensions.json to match the publisher you wish to deploy this task under.
+### Build Steps
 
- Run: tfx extension create to build a release zip of the extension ready for upload.
+ 1. Run **npm install** to install the project dependancies.
+
+ 2. Update the publisher field in vss-extensions.json to match the publisher you wish to deploy this task under.
+
+ 3. change directory into the **exportAppSettingsToJson** and run the **tsc** command to generate index.js from the index.ts file.
+
+ 4. finally, run **tfx extension create** to build a release zip of the extension ready for upload to the marketplace.
