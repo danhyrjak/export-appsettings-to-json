@@ -23,25 +23,25 @@ async function run() {
         const appSettingOffset = appSettingPrefix.length;
         const x: any = {};
         vars.forEach(v => {
-            const name = v.name.toLowerCase();
-            if (name.startsWith(appSettingPrefix)) {
+            const lcase_name = v.name.toLowerCase();
+            if (lcase_name.startsWith(appSettingPrefix)) {
                 var propVal: any;
                 var propName: string;
-                if (name.startsWith(appSettingPrefix + "number.")) {
-                    propName = name.substring(appSettingOffset + 7);
+                if (lcase_name.startsWith(appSettingPrefix + "number.")) {
+                    propName = v.name.substring(appSettingOffset + 7);
                     propVal = Number(v.value);
                 }
-                else if (name.startsWith(appSettingPrefix + "string.")) {
-                    propName = name.substring(appSettingOffset + 7);
+                else if (lcase_name.startsWith(appSettingPrefix + "string.")) {
+                    propName = v.name.substring(appSettingOffset + 7);
                     propVal = v.value;
                 }
-                else if (name.startsWith(appSettingPrefix + "bool.")) {
-                    propName = name.substring(appSettingOffset + 5);
+                else if (lcase_name.startsWith(appSettingPrefix + "bool.")) {
+                    propName = v.name.substring(appSettingOffset + 5);
                     propVal = (v.value || '').trim().toLowerCase() === "true";
                 }
                 else {
                     //treat as string (untyped)
-                    propName = name.substring(appSettingOffset);
+                    propName = v.name.substring(appSettingOffset);
                     propVal = v.value;
                 }
 

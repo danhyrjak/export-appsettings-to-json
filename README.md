@@ -38,3 +38,8 @@ Note: If no known type is specifed then a string type is presumed. For example t
  3. change directory into the **exportAppSettingsToJson** and run the **tsc** command to generate index.js from the index.ts file.
 
  4. change directory back to the root of the project and run **tfx extension create** to build a release zip of the extension ready for upload to the marketplace.
+
+## References
+
+I used the following article as refrence when building this release task:
+<https://docs.microsoft.com/en-us/azure/devops/extend/develop/add-build-task?view=azure-devops>
